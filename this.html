@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Smooth Fade + Slide Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(130deg, #000 0%, #333 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Floating Glow Background */
+    header::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: floatGlow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      from { transform: translate(0,0); }
+      to { transform: translate(40px,60px); }
+    }
+
+    header h1 {
+      font-size: 52px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.85;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      margin-bottom: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .skill {
+      padding: 12px 20px;
+      background: #000;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 14px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .skill:hover {
+      background: #444;
+      transform: translateY(-3px);
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: #fafafa;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 22px;
+      border: 1px solid #e5e5e5;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #000;
+      color: #fff;
+      margin-top: 60px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+<header class="fade-in">
+  <h1>Mohamed Alaamiri</h1>
+  <p>Aspiring Software Engineer • AI/ML </p>
+</header>
+
+<section class="fade-in card">
+  <h2>About Me</h2>
+  <p>
+    I'm a college student passionate about AI, software engineering, and building real-world projects. I'm currently learning C++, Python, Flutter, and creating apps, AI tools, and automation systems.
+  </p>
+</section>
+
+<section class="fade-in card">
+  <h2>Skills</h2>
+  <div class="skills-list">
+    <span class="skill">Python</span>
+    <span class="skill">C++</span>
+    <span class="skill">Java</span>
+    <span class="skill">Flutter (Dart)</span>
+    <span class="skill">AI / OpenAI API</span>
+    <span class="skill">GitHub</span>
+    <span class="skill">Google Maps API</span>
+    <span class="skill">HTML/CSS</span>
+  </div>
+</section>
+
+<section class="fade-in card">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>Caffeine Tracking Application</h3>
+    <p>•Implemented Camera for Users to snapshot a picture of their beverage</p>
+    <p>•Took open source data integrated in JSON file</p>
+    <p><a href="#">GitHub Link</a> • <a href="#">Live Demo</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>AI Habit Tracker</h3>
+    <p>An app that analyzes habits and gives AI-powered insights and recommendations.</p>
+    <p><a href="#">GitHub Link</a></p>
+  </div>
+
+  <div class="project-card">
+    <h3>2D Java Game</h3>
+    <p>Designed and implemented 2D adventure game with 3 dimensional camera movement,and player movement using Java IntelliJ</p>
+    <p>Using Java tutorials and personal logic</p>
+    <P>Currently adding enemies, Non-playable characters, and world design</P>
+    <p><a href="#">GitHub Link</a></p>
+  </div>
+
+</section>
+
+<section class="fade-in card">
+  <h2>Contact</h2>
+  <p>Email: <strong>mohamedalaamiri.swe@gmail.com</strong></p>
+  <p>GitHub: <a href="#">Malaamiri11</a></p>
+  <p>LinkedIn: <a href="#">mohamedalaamiri.swe</a></p>
+</section>
+
+<footer>
+  © 2025 Mohamed Alaamiri — Portfolio Website
+</footer>
+
+</body>
+</html>
+
